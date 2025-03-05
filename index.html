@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Assignment-2</title>
+    <style>
+        table {
+            width: 50%; /* Slightly reduced table width */
+            margin: 30px auto; /* Increased spacing between tables */
+            border-collapse: collapse; /* Single-line borders */
+        }
+        td, th {
+            border: 1px solid black; /* Borders for table cells */
+            padding: 5px; /* Inner spacing */
+        }
+
+        /* Styling for the 2nd and 3rd tables */
+        table:nth-of-type(2) td, table:nth-of-type(2) th,
+        table:nth-of-type(3) td, table:nth-of-type(3) th {
+            border: 1px solid black; /* Normal outer borders */
+        }
+
+        /* Light black inner borders for the 2nd and 3rd tables */
+        table:nth-of-type(2) td + td,
+        table:nth-of-type(2) th + th,
+        table:nth-of-type(2) tr + tr td,
+        table:nth-of-type(3) td + td,
+        table:nth-of-type(3) th + th,
+        table:nth-of-type(3) tr + tr td {
+            border-left: 2px solid rgb(100, 100, 100);  /* Bold vertical lines */
+            border-top: 2px solid rgb(100, 100, 100);   /* Bold horizontal lines */
+        }
+
+        table:nth-of-type(1) {
+            padding: 5px; /* Reduce padding */
+            line-height: 0.1; /* Reduces padding to save space */
+        }
+
+        /* Reduce height of heading row in Table 2 */
+        table:nth-of-type(2) tr:first-child th {
+            padding: 5px; /* Reduce padding */
+            line-height: 0.1; /* Reduces padding to save space */
+        }
+
+        /* Table 4 Styling */
+        table:nth-of-type(4) {
+            border: 2px solid rgb(100, 100, 100); /* Light black border for whole table */
+        }
+
+        /* First Row (Slightly Taller than the Third) */
+        table:nth-of-type(4) tr:first-child td {
+            background-color: rgb(52, 95, 4);
+            border: 2px solid darkgreen;
+            height: 12px; /* Slightly bigger than third row */
+        }
+
+        /* Third Row (Shorter than First) */
+        table:nth-of-type(4) tr:last-child td {
+            background-color: darkblue;
+            border: 2px solid rgb(100, 100, 100);
+            height: 7px; /* Smaller than first row */
+        }
+
+        /* Second Row (Tallest) */
+        table:nth-of-type(4) tr:nth-child(2) td {
+            border: 2px solid black;
+            height: 120px; /* Keeps it the tallest */
+        }
+
+        /* Adjusting Column Widths */
+        table:nth-of-type(4) td:first-child {
+            width: 35%; /* First column wider */
+        }
+
+        table:nth-of-type(4) td:nth-child(2) {
+            width: 30%; /* Second column */
+        }
+
+        table:nth-of-type(4) td:last-child {
+            width: 25%; /* Third column narrower */
+        }
+
+        /* Image Styling - Aligned Exactly to the Left with Space Above & Below */
+        table:nth-of-type(4) tr:nth-child(2) td:nth-child(2) img {
+            width: 180px;
+            height: 90px;
+            display: block;
+            margin-left: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Table 1: Alignment Example -->
+    <table>
+        <tr>
+            <td align="left">left</td>
+            <td align="center">center</td>
+            <td align="right">right</td>
+        </tr>
+        <tr>
+            <td align="left">left</td>
+            <td align="center">center</td>
+            <td align="right">right</td>
+        </tr>
+        <tr>
+            <td align="left">left</td>
+            <td align="center">center</td>
+            <td align="right">right</td>
+        </tr>
+    </table>
+
+    <!-- Table 2 -->
+    <table>
+        <tr>
+            <th colspan="6">Heading</th>
+        </tr>
+        <tr>
+            <td colspan="6"></td>  
+        </tr>
+        <tr>
+            <td rowspan="4"></td>  
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>  
+            <td colspan="3" rowspan="2"></td>  
+            <td></td>  
+        </tr>
+        <tr>
+            <td></td>  
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>  
+        </tr>
+    </table>
+
+    <!-- Table 3 -->
+    <table>
+        <tr>
+            <td></td>  
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="4"></td>  
+            <td></td>  
+            <td rowspan="4"></td>  
+        </tr>
+        <tr>
+            <td></td>  
+        </tr>
+        <tr>
+            <td></td>  
+        </tr>
+        <tr>
+            <td></td>  
+        </tr>
+        <tr>
+            <td></td>  
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Table 4 -->
+    <table>
+        <tr>  <!-- First row (Slightly Taller) -->
+            <td colspan="3"></td>
+        </tr>
+        <tr>  <!-- Second row (Tallest) -->
+            <td></td>  <!-- First column wider -->
+            <td>
+                <img src="Capture.PNG" alt="Blue Frog">  
+            </td>
+            <td></td>  <!-- Third column narrower -->
+        </tr>
+        <tr>  <!-- Third row (Shorter) -->
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
